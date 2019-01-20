@@ -1,0 +1,74 @@
+//pl editer로 코딩 
+
+	------------ get_ani 시작 ------------------
+	function get_ani(birth number) return varchar2
+	is 
+		temp number := 0;    --태어난해 나머지값을 저장하기 위한 변수 선언
+		tti varchar2(10); 		--출력될 띠 값을 반환할 변수 선언
+	begin
+	     temp := mod(birth, 12);  --12로 나눈 나머지 저장
+	     if temp = 0 then
+	     	 tti := '원숭이';
+	     elsif temp = 1 then
+	     	 tti := '닭';
+	     elsif temp = 2 then
+	     	 tti := '개';
+	     elsif temp = 3 then
+	     	 tti := '돼지';
+	     elsif temp = 4 then
+	     	 tti := '쥐';
+	     elsif temp = 5 then
+	     	 tti := '소';
+	     elsif temp = 6 then
+	     	 tti := '호랑이';	
+	     elsif temp = 7 then
+	     	 tti := '토끼';
+	     elsif temp = 8 then
+	     	 tti := '용'; 
+		 elsif temp = 9 then
+	     	 tti := '뱀';
+	   	 elsif temp = 10 then
+	     	 tti := '말';
+	     elsif temp = 11 then
+	     	 tti := '양';
+	     else
+	     	 tti := '끔찍한 혼종';
+	     end if;
+	     
+	     return  tti;    --띠 반환
+	
+	end get_ani ;
+	------------ get_ani 끝 ------------------	
+	
+	------------ avr_work 시작 ------------------
+	procedure avr_work(i_deptno number,  avr out number)
+	is
+	     cnt_p number(10) := 0;      --부서별 사원숫자를 세기 위한 변수 선언
+	     sum_y number(10) := 0; 		--부서별 사원수의 근속년수의 합을 위한 변수 선언
+	     
+	begin
+		--부서별 사원수를 count로  세어준다.
+		--부서벌 사원의 근속년수(현재년도 - 입사일)의 합을 sum으로 구해준다
+		select    count(empno), sum(to_char(sysdate, 'yyyy') - to_char(hiredate, 'yyyy'))
+		into		cnt_p,  sum_y
+		from 		emp
+		where 	deptno = i_deptno;
+		
+		avr := 0;       --반환할 평균을 초기화해준다
+		--근속년수의 합 / 부서별 총사원수를 나눠준 값을 out_parameter에 넣어준다 
+		avr := trunc(sum_y / cnt_p);       
+		
+	end avr_work ;
+	------------ avr_work 끝 ------------------
+
+
+golden으로 코딩
+
+--띠 구하기
+select lucky_pack.get_ani(1992)
+from dual;
+
+--평균 근속년수 구하기
+var avr_y number(10);
+exec lucky_pack.avr_work(10, :avr_y);
+print avr_y;

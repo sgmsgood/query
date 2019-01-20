@@ -1,0 +1,1 @@
+imp userid=scott/tiger tables=car_model,car_country,car_maker file=car.dmp
