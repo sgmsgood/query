@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="&apos;erd_prj/cinmea&apos; 자원을 삭제합니다." deleteContents="false" description="&apos;erd_prj/cinmea&apos; 자원을 삭제합니다." element1="/erd_prj/cinmea" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1548286216329"/>
+</session>
