@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
-<window height="944" maximized="true" minimized="true" width="1317" x="159" y="164">
+<window height="944" maximized="true" minimized="true" width="1317" x="242" y="473">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -26,28 +26,12 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="test.exerd" partName="test.exerd" path="C:/dev/query/workspace/erd_prj/test.exerd" title="test.exerd" tooltip="erd_prj/test.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/test.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="lunch.exerd" partName="lunch.exerd" path="C:/dev/query/workspace/erd_prj/lunch.exerd" title="lunch.exerd" tooltip="erd_prj/lunch.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/lunch.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="reverse.exerd" partName="reverse.exerd" path="C:/dev/query/workspace/erd_prj/reverse.exerd" title="reverse.exerd" tooltip="erd_prj/reverse.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/reverse.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="test1.exerd" partName="test1.exerd" path="C:/dev/query/workspace/erd_prj/test1.exerd" title="test1.exerd" tooltip="erd_prj/test1.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/test1.exerd"/>
-</editor>
-<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="movie.exerd" partName="movie.exerd" path="C:/dev/query/workspace/cinema/movie.exerd" title="movie.exerd" tooltip="cinema/movie.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/cinema/movie.exerd"/>
+<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="SsangyongCinema.exerd" partName="SsangyongCinema.exerd" title="SsangyongCinema.exerd" tooltip="\\211.63.89.130\sharing\영민이의 맥주창고\02.group_prj2\DB 자료\SsangyongCinema.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:////211.63.89.130/sharing/영민이의%20맥주창고/02.group_prj2/DB%20자료/SsangyongCinema.exerd"/>
 </editor>
 </editors>
 <views>
@@ -137,7 +121,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.16485508" ratioLeft="273" ratioRight="1383" relationship="2" relative="leftFolder"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@4c9e38" ratio="0.78550726" ratioLeft="1084" ratioRight="296" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4c9e38" ratio="0.8954635" ratioLeft="908" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="com.tomato.exerd.ui.views.thumbnail" appearance="2" expanded="2">
 <page content="com.tomato.exerd.ui.views.thumbnail" label="썸네일"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -196,6 +180,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/test.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/test1.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/cinema/movie.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/test1.exerd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" uri="file:////211.63.89.130/sharing/영민이의%20맥주창고/02.group_prj2/DB%20자료/SsangyongCinema.exerd"/>
 </editors>
 <item historyLabel="test.exerd" index="0"/>
 <item historyLabel="reverse.exerd" index="1"/>
@@ -238,7 +224,10 @@
 <item historyLabel="reverse.exerd" index="9"/>
 <item historyLabel="test.exerd" index="10"/>
 <item historyLabel="test1.exerd" index="11"/>
-<item active="true" historyLabel="movie.exerd" index="12"/>
+<item historyLabel="movie.exerd" index="12"/>
+<item historyLabel="test1.exerd" index="13"/>
+<item historyLabel="movie.exerd" index="12"/>
+<item active="true" historyLabel="SsangyongCinema.exerd" index="14"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -256,6 +245,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="SsangyongCinema.exerd" tooltip="\\211.63.89.130\sharing\영민이의 맥주창고\02.group_prj2\DB 자료\SsangyongCinema.exerd">
+<persistable uri="file:////211.63.89.130/sharing/영민이의%20맥주창고/02.group_prj2/DB%20자료/SsangyongCinema.exerd"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="movie.exerd" tooltip="cinema/movie.exerd">
 <persistable path="/cinema/movie.exerd"/>
 </file>
