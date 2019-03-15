@@ -36,6 +36,12 @@ select * from member;
 
 , MEMBER_ID, HOLD_POINTselect * from movie where movie_code = substr('NM_000020195',2,8);
 
-alter table member modify hold_point number(9);
+alter table member modify hold_point number(9);    
+
+
+insert into member (member_id, password, name, birthdate, phone, membership, hold_point, acc_point, input_date)
+select 'guest123', '1234','°Ô½ºÆ®','19900219', '010-4511-1111', 's','0','0', sysdate
+from dual
+where not exists (select * from member where phone = '010-0011-1111');
 
 commit;
