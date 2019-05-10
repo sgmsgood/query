@@ -3,6 +3,11 @@
 	<section name="solutionSelectionDialog">
 		<item value="1" key="applyScope"/>
 	</section>
+	<section name="com.tomato.exerd.export.ModelExportWizardDialog">
+		<item value="clipboard" key="sendType"/>
+		<item value="HTML 표(기본)" key="lastUsedTemplateName"/>
+		<item value="" key="destinationPath"/>
+	</section>
 	<section name="solution">
 	</section>
 	<section name="com.tomato.exerd.tableaccess.QuickTableAccessDialog">
@@ -17,5 +22,11 @@
 	</section>
 	<section name="com.tomato.exerd.diagramwizard.DiagramWizard">
 		<item value="schema" key="method"/>
+	</section>
+	<section name="com.tomato.exerd.export.ExportModelWizard">
+		<list key="templateContents">
+		</list>
+		<list key="templateNames">
+		</list>
 	</section>
 </section>

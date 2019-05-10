@@ -9,59 +9,61 @@
 -- 중복된 사원번호가 입력되면 예외로 처리한다.
 
 create or replace procedure insert_test_proc(
-		empno number, 
+		empno number,
 		ename varchar2,
 		sal number,
 		job varchar2,
 		msg out varchar2,
 		row_cnt out number)
 
-is 
+is
 
     temp_sal number := sal;
 
-begin 
+begin
 
--- 제약사항 1.        
+-- 제약사항 1.
 
 	if empno between 1 and 9999 then
 -- 제약사항 2.
 		if temp_sal < 2500 then
 		   temp_sal := 2500;
 		   end if;
-		   	
+
 		if temp_sal > 8000 then
 			temp_sal := 8000;
-		 end if;            
--- 제약사항 3.		 
+		 end if;
+-- 제약사항 3.
 		if  job in ('사원', '주임', '대리', '과장', '차장', '부장') then
-		    
+
 		    insert into test_proc(empno,ename, hiredate, sal, job)
-		    values(empno, initcap(ename), sysdate, temp_sal, job); 
-		    
-		    row_cnt := sql%rowcount;	
-		    
+		    values(empno, initcap(ename), sysdate, temp_sal, job);
+
+		    row_cnt := sql%rowcount;
+
 		    commit;
-		    
-		    msg:= empno||'번 사원 정보가 추가되었습니다.';	    
-		    
+
+		    msg:= empno||'번 사원 정보가 추가되었습니다.';
+
 		else
 			msg:= job||'은 입력가능한 직급이 아닙니다.';
 		end if;
-	
-	else 
+
+	else
 		msg := empno||'사원번호는 1~9999 사이만 입력가능';
-	
-	end if; 
-	
+
+	end if;
+
 		exception
 		when dup_val_on_index then
-			msg := empno||'번 사원번호는 이미 존재합니다.';
+			msg := empno||'번 사원번호는 이미 존재합니다.';   
+			row_cnt:=0;
 		when others then
 --			msg := '예외발생'||sqlerrm||'/'||sqlcode;
 			if sqlcode = -12899 then
-			 msg := ename||'명은 한글 3자 영어 10자를 초과하였습니다.';
-			end if; 		
-	
+			 msg := ename||'명은 한글 3자 영어 10자를 초과하였습니다.';  
+			 row_cnt:=0;
+			end if;
+
 end;
 /
